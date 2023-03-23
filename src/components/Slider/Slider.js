@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Slider.scss";
 
 const Slider = ({ images }) => {
+
   const [currentImage, setCurrentImage] = useState(0);
 
   const handlePrevClick = () => {

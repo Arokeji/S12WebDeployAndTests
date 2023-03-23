@@ -1,19 +1,37 @@
-test("renders without crashing", () => {
-  // TODO
-});
+import { render } from "@testing-library/react";
+import Slider from "./Slider";
 
-test("displays the first image on initial render", () => {
-  // TODO
-});
+describe("Slider component", () => {
+  let component;
+  let mockImages;
 
-test('changes the displayed image when the "Siguiente" button is clicked', () => {
-  // TODO
-});
+  beforeEach(() => {
+    component = render(
+      <Slider />
+    );
+  });
 
-test('changes the displayed image when the "Anterior" button is clicked', () => {
-  // TODO
-});
+  mockImages = jest.fn();
 
-test("displays images with the correct src", () => {
-  // TODO
+  test("renders without crashing", () => {
+    expect(component).not.toBeNull();
+    expect(console.error).not.toHaveBeenCalled();
+
+  });
+
+  test("displays the first image on initial render", () => {
+    //const firstImage = component.container.querySelector('.slider__image');
+  });
+
+  test('changes the displayed image when the "Siguiente" button is clicked', () => {
+    // TODO
+  });
+
+  test('changes the displayed image when the "Anterior" button is clicked', () => {
+    // TODO
+  });
+
+  test("displays images with the correct src", () => {
+    // TODO
+  });
 });
